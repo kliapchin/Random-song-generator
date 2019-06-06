@@ -1,6 +1,8 @@
+# This function will enable the user to pick a genre out of suggested categories
 def pick_genre():
     genre = ''
     categories = ['50s','60s','70s','80s','90s','2000s','top hits','hip hop','house']
+    # The user is asked to select a category until a valid genre from the list has been chosen
     while genre == '':
         print('\nPlease choose one of the following categories:')
         print(f'         {categories[0]}         |         {categories[1]}         |         {categories[2]}         ')
@@ -15,6 +17,8 @@ def pick_genre():
         else:
             break
     return(genre)
+
+# Gives the user the option to select another song
 def repick():
     choose_another_song = input('\nDo you want me to choose another song? ')
     return choose_another_song[0].lower() == 'y'
@@ -140,7 +144,6 @@ if __name__ == '__main__':
 
 	        if rowspan:
 	            for i in rowspan:
-	                # tr value of rowspan in present in 1th place in results
 	                for j in range(1,i[2]):
 	                    song_list[i[0]+j].insert(i[1],i[3])
 
